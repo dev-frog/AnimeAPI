@@ -7,7 +7,7 @@ export class PrismaService extends PrismaClient {
     super({
       datasources: {
         db: {
-          url: 'mongodb+srv://frog:frogdb31337@cluster0.fztbpfv.mongodb.net/anime_list?retryWrites=true&w=majority',
+          url: process.env.DATABASE_URL,
         },
       },
     });
